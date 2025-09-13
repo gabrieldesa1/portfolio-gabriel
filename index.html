@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="imgs/program-light.jpg" as="image">
+    <link rel="preload" href="imgs/program-dark.jpg" as="image">
+
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007bff',
+                        secondary: '#6c757d',
+                        dark: '#1a1a2e',
+                        light: '#f8f9fa',
+                    },
+                },
+            },
+        };
+    </script>
+
+<body id="top" class="bg-light text-dark font-sans">
+    
+    <!-- Header -->
+    <header class="sticky top-0 bg-white shadow-md dark:bg-dark dark:text-light z-10">
+        <nav class="container mx-auto flex justify-between items-center p-4">
+            <a href="#top" class="text-2xl font-bold text-primary hover:underline">Gabriel de Sá</a>
+            <!-- <h1 class="text-2xl font-bold text-primary">Gabriel de Sá</h1> -->
+            <div class=" hidden md:flex items-center space-x-6">
+                <a href="#about" class="hover:text-primary transition">Sobre</a>
+                <a href="#skills" class="hover:text-primary transition">Habilidades</a>
+                <a href="#projects" class="hover:text-primary transition">Projetos</a>
+                <!-- <a href="#experience" class="hover:text-primary transition">Experiência</a> (pro futuro) -->
+                <a href="#contact" class="hover:text-primary transition">Contato</a>
+            </div>
+            <button id="mode-toggle" class="text-2xl focus:outline-none">
+                <i class="bx bx-moon"></i>
+            </button>
+
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <div class="container mx-auto text-center px-4">
+            <div class="hero">
+                <div class="profile-container">
+                    <img src="imgs/icon.jfif" alt="Gabriel Pic" class="profile-pic" />
+                </div>
+
+                <h1 class="text-5xl font-bold mb-4">Gabriel de Sá</h1>
+                <p class="text-xl mb-6">Desenvolvedor Backend apaixonado por criar soluções escaláveis</p>
+                <p class="text-lg max-w-2xl mx-auto">
+                    Com experiência em PHP, MySQL e Python, me especializo em construir APIs, gerenciar bancos de dados
+                    e criar soluções seguras para aplicações web.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-light dark:bg-dark dark:text-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary">Sobre</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 animate-fadeInUp">
+                <div class="md:w-1/2">
+                    <img src="imgs/program-light.jpg" id="about-image" alt="about image"
+                        class="rounded-lg shadow-lg max-h-[500px] object-cover w-full" />
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-6">
+                        Olá! Sou Gabriel, de Rio das Ostras - RJ. Tenho 24 anos e sou bacharel em Sistemas de
+                        Informação. Minha paixão é trabalhar com tecnologia, criando sistemas robustos e otimizando
+                        bancos de dados.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Tenho experiência prática com PHP (Laravel) e MySQL, além de conhecimentos em Python e
+                        JavaScript (React/Angular). Nos meus projetos pessoais, busco sempre boas práticas, modularidade
+                        e desempenho.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="Gabriel de Sá.pdf" class="flex items-center space-x-2 text-primary hover:underline">
+                            <i class="bx bx-download text-2xl"></i>
+                            <span>Download CV</span>
+                        </a>
+                        <a href="#contact" class="flex items-center space-x-2 text-primary hover:underline">
+                            <i class="bx bx-envelope text-2xl"></i>
+                            <span>Fale comigo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary">Habilidades</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 animate-fadeInUp">
+                <div class="text-center">
+                    <div
+                        class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+                        <i class="bx bx-code-alt text-4xl text-primary mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Linguagens</h3>
+                        <p>PHP, Python, JavaScript</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+                        <i class="bx bx-data text-4xl text-primary mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Bancos de Dados</h3>
+                        <p>MySQL, PostgreSQL</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+                        <i class="bx bx-cloud text-4xl text-primary mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Nuvem</h3>
+                        <p>Hospedagem e Deploy</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105">
+                        <i class="bx bx-book text-4xl text-primary mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Complementar</h3>
+                        <p>Inglês avançado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 bg-light dark:bg-dark dark:text-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary">Projetos em Destaque</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fadeInUp">
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="imgs/blog img.jpg"
+                        alt="Screenshot of a modern e-commerce backend dashboard showing API endpoints, user authentication logs, and real-time analytics graphs with a clean, dark UI interface"
+                        class="w-full h-64 object-cover rounded-t-lg" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4">Blog Kombat</h3>
+                        <p class="mb-4">Blog Kombat é um blog temático de artes marciais desenvolvido com PHP e MySQL,
+                            com foco em organização modular, reuso de templates e boas práticas de front-end.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/gabrieldesa1/blog-kombat"
+                                class="text-primary hover:underline">GitHub</a>
+                            <a href="https://www.linkedin.com/posts/gabrieldesa1_php-mysql-webdevelopment-activity-7353934508326273026-8dha?utm_source=share&utm_medium=member_desktop&rcm=ACoAADuAsz0BQ7xYMA9MotmJd3dzIFrR_jLihps"
+                                class="text-primary hover:underline">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="imgs/pizza img.jfif"
+                        alt="Visualization of a distributed system architecture diagram with microservices connected via APIs, database clusters, and cloud load balancers in a colorful, modern design"
+                        class="w-full h-64 object-cover rounded-t-lg" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4">Sistema de Pedidos Online</h3>
+                        <p class="mb-4">Um sistema simples e funcional feito em PHP e MySQL que permite ao usuário
+                            montar sua própria pizza escolhendo borda, massa e até 3 sabores.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/gabrieldesa1/pizzaria"
+                                class="text-primary hover:underline">GitHub</a>
+                            <a href="https://www.linkedin.com/posts/gabrieldesa1_php-mysql-webdevelopment-activity-7357178715430150144-Cj01?utm_source=share&utm_medium=member_desktop&rcm=ACoAADuAsz0BQ7xYMA9MotmJd3dzIFrR_jLihps"
+                                class="text-primary hover:underline">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="imgs/crud img.jpg"
+                        alt="Visualization of a distributed system architecture diagram with microservices connected via APIs, database clusters, and cloud load balancers in a colorful, modern design"
+                        class="w-full h-64 object-cover rounded-t-lg" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4">CRUD em PHP com MySQL e JavaScript</h3>
+                        <p class="mb-4">CRUD (Create, Read, Update, Delete) desenvolvido em PHP, utilizando MySQL
+                            como banco de dados, Bootstrap para o layout responsivo e um pouco de JavaScript para
+                            interação no front-end.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/gabrieldesa1/crud-php"
+                                class="text-primary hover:underline">GitHub</a>
+                            <a href="https://www.linkedin.com/posts/gabrieldesa1_php-mysql-webdevelopment-activity-7353599223495327745-ifzQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADuAsz0BQ7xYMA9MotmJd3dzIFrR_jLihps"
+                                class="text-primary hover:underline">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="imgs/python img.png"
+                        alt="Visualization of a distributed system architecture diagram with microservices connected via APIs, database clusters, and cloud load balancers in a colorful, modern design"
+                        class="w-full h-64 object-cover rounded-t-lg" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4">Spotify Playlist Sync</h3>
+                        <p class="mb-4">Script em Python que lê uma playlist do YouTube e cria uma playlist idêntica no
+                            Spotify, adicionando automaticamente as faixas encontradas.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/gabrieldesa1/Youtube-para-Spotify"
+                                class="text-primary hover:underline">GitHub</a>
+                            <a href="https://www.linkedin.com/posts/gabrieldesa1_python-spotify-youtube-activity-7362263620048642048-2-fx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADuAsz0BQ7xYMA9MotmJd3dzIFrR_jLihps"
+                                class="text-primary hover:underline">LinkedIn</a>
+                        </div>
+    </section>
+
+    <!-- Experience (pro futuro)
+    <section id="experience" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary">Professional Experience</h2>
+            <div class="space-y-8 animate-fadeInUp">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary">Senior Backend Developer</h3>
+                    <p class="text-secondary mb-2">TechCorp, São Paulo — 2020 - Present</p>
+                    <p>Lead development of flagship products, optimized APIs for 50% faster response times, mentored junior devs, and implemented CI/CD pipelines.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary">Backend Developer</h3>
+                    <p class="text-secondary mb-2">StartUp Inc., Remote — 2017 - 2020</p>
+                    <p>Developed scalable Node.js applications, integrated third-party APIs, and maintained databases across multiple projects.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary">Full-Stack Developer</h3>
+                    <p class="text-secondary mb-2">WebAgency Brazil, Rio de Janeiro — 2015 - 2017</p>
+                    <p>Handled both frontend and backend tasks, built REST APIs, and collaborated with teams to deliver web solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Entre em Contato</h2>
+            <div class="flex flex-col md:flex-row gap-8 animate-fadeInUp">
+                <div class="md:w-1/3">
+                    <h3 class="text-2xl font-semibold mb-4">Vamos nos conectar!</h3>
+                    <p class="mb-6">Estou aberto a oportunidades, colaborações em projetos ou apenas trocar ideias sobre
+                        tecnologia. Entre em contato via formulário ou redes sociais.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <i class="bx bx-envelope text-2xl"></i>
+                            <span>httpsgabrieldev@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="bx bx-phone text-2xl"></i>
+                            <span>+55 22 99811-8135</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="bx bx-map text-2xl"></i>
+                            <span>Rio de Janeiro, Brazil</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3">
+                    <form id="contact-form" class="bg-white text-dark p-6 rounded-lg shadow-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <input type="text" id="name" placeholder="Seu nome"
+                                class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                                required>
+                            <input type="email" id="email" placeholder="Seu email"
+                                class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                                required>
+                        </div>
+                        <input type="text" id="subject" placeholder="Assunto"
+                            class="w-full p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:border-primary"
+                            required>
+                        <textarea id="message" rows="5"
+                            placeholder="Esse campo não funciona pois o githubpages não permite a injeção de dados. Deixei aqui pro futuro (Quando hospedar em um site de verdade)"
+                            class="w-full p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:border-primary"
+                            required></textarea>
+                        <button type="submit"
+                            class="bg-primary text-white px-6 py-3 rounded hover:bg-secondary transition">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Gabriel de Sá.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://github.com/gabrieldesa1" class="hover:text-primary"><i
+                        class="bx bxl-github text-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/gabrieldesa1/" class="hover:text-primary"><i
+                        class="bx bxl-linkedin text-2xl"></i></a>
+                <a href="https://www.instagram.com/noxycrf/" class="hover:text-primary"><i
+                        class="bx bxl-instagram text-2xl"></i></a>
+                <a href="https://wa.me/5522998118135" class="hover:text-primary"><i
+                        class="bx bxl-whatsapp text-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
