@@ -40,7 +40,7 @@ contactForm.addEventListener('submit', (e) => {
     }
 });
 
-// Smooth Scrolling for Nav Links
+// Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -60,3 +60,21 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 document.querySelectorAll('.animate-fadeInUp').forEach(el => observer.observe(el));
+
+// Hamburger menu toggle
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+
+  // troca ícone 
+  const icon = menuToggle.querySelector("i");
+  if (mobileMenu.classList.contains("hidden")) {
+    icon.classList.remove("bx-x");
+    icon.classList.add("bx-menu");
+  } else {
+    icon.classList.remove("bx-menu");
+    icon.classList.add("bx-x");
+  }
+});
