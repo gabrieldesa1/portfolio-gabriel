@@ -1,4 +1,4 @@
-// Dark/Light Mode Toggle
+// Dark/Light 
 const modeToggle = document.getElementById('mode-toggle');
 const body = document.body;
 const aboutImage = document.getElementById('about-image');
@@ -7,13 +7,21 @@ function updateTheme() {
     const icon = modeToggle.querySelector('i');
     const isDark = body.classList.contains('dark');
 
+    // if (isDark) {
+    //     icon.className = 'bx bx-sun';
+    //     aboutImage.src = 'imgs/program-dark.jpg';
+    // } else {
+    //     icon.className = 'bx bx-moon';
+    //     aboutImage.src = 'imgs/program-light.jpg';
+    // }
     if (isDark) {
-        icon.className = 'bx bx-sun';
-        aboutImage.src = 'imgs/program-dark.jpg';
+        icon.classList.replace("bx-moon", "bx-sun");
+        aboutImage.src = "imgs/program-dark.jpg";
     } else {
-        icon.className = 'bx bx-moon';
-        aboutImage.src = 'imgs/program-light.jpg';
+        icon.classList.replace("bx-sun", "bx-moon");
+        aboutImage.src = "imgs/program-light.jpg";
     }
+
 }
 
 modeToggle.addEventListener('click', () => {
@@ -23,7 +31,7 @@ modeToggle.addEventListener('click', () => {
 
 });
 
-// Contact Form Submission (Simple JS for demo)
+// Contact Form 
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -66,15 +74,22 @@ const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
 menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("hidden");
 
-  // troca ícone 
-  const icon = menuToggle.querySelector("i");
-  if (mobileMenu.classList.contains("hidden")) {
-    icon.classList.remove("bx-x");
-    icon.classList.add("bx-menu");
-  } else {
-    icon.classList.remove("bx-menu");
-    icon.classList.add("bx-x");
-  }
+    //   // troca ícone 
+    //   const icon = menuToggle.querySelector("i");
+    //   if (mobileMenu.classList.contains("hidden")) {
+    //     icon.classList.remove("bx-x");
+    //     icon.classList.add("bx-menu");
+    //   } else {
+    //     icon.classList.remove("bx-menu");
+    //     icon.classList.add("bx-x");
+    //   }
+    // troca ícone 
+    const icon = menuToggle.querySelector("i");
+    if (mobileMenu.classList.contains("hidden")) {
+        icon.classList.replace("bx-x", "bx-menu");
+    } else {
+        icon.classList.replace("bx-menu", "bx-x");
+    }
 });
