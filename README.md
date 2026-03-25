@@ -65,7 +65,7 @@ Rodapé com redes sociais.
 
 Se quiser trocar uma ideia ou conhecer melhor meu trabalho:
 
-📧 Email: httpsgabrieldev@gmail.com
+📧 Email: devgabrieldesa@gmail.com
 
 📱 WhatsApp: +55 22 99811-8135
 
